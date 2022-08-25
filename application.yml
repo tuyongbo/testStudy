@@ -9,6 +9,7 @@ spring:
     name: springcloud-config-server-dev
 server:
   port: 8022
+
 ---
 spring:
   profiles: test
