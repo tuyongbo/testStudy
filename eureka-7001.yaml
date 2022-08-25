@@ -4,6 +4,25 @@ spring:
 ---
 spring:
   profiles: dev
+  application:
+    name: springcloud-eureka-dev
+server:
+  port: 7001
+eureka:
+  instance:
+    hostname: eureka.7001.com
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://eureka.7002.com:7002/eureka/,http://eureka.7003.com:7003/eureka/
+
+
+---
+spring:
+  profiles: test
+  application:
+    name: springcloud-eureka-test
 server:
   port: 7001
 eureka:
